@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://nletk73n3jcy"]
+
+[ext_resource type="FontFile" uid="uid://b366gcebddcsv" path="res://assets/Fonts/RodeliaRegular-XG7w2.ttf" id="1_2vps4"]
+[ext_resource type="Script" uid="uid://dufiecr48cm2h" path="res://Scripts/fishing_shop.gd" id="1_60buo"]
+[ext_resource type="Texture2D" uid="uid://h2f24yyyj123" path="res://assets/Tiny Coast Pack/Other/baits_16x16.png" id="2_fen1w"]
+
+[node name="FishingShop" type="CanvasLayer" unique_id=434899543]
+scale = Vector2(2.3, 2.3)
+transform = Transform2D(2.3, 0, 0, 2.3, 0, 0)
+script = ExtResource("1_60buo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=370463242]
+offset_left = 109.565216
+offset_top = 18.652174
+offset_right = 356.56522
+offset_bottom = 281.65216
+color = Color(0.16862746, 0.1254902, 0.047058824, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1798107320]
+offset_left = 175.56522
+offset_top = 18.652174
+offset_right = 272.56522
+offset_bottom = 41.652176
+theme_override_fonts/font = ExtResource("1_2vps4")
+text = "Fishing Shop"
+
+[node name="Bait" type="Label" parent="." unique_id=1886620103]
+offset_left = 213.56522
+offset_top = 37.652172
+offset_right = 241.56522
+offset_bottom = 53.360508
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 13
+text = "Bait"
+
+[node name="ComingSoon" type="Label" parent="." unique_id=1822262730]
+offset_left = 169.56522
+offset_top = 120.652176
+offset_right = 278.56522
+offset_bottom = 164.65219
+theme_override_fonts/font = ExtResource("1_2vps4")
+text = "New Items
+Coming Soon..."
+
+[node name="ClownfishLure" type="Sprite2D" parent="." unique_id=2134232045]
+position = Vector2(127.565216, 69.652176)
+texture = ExtResource("2_fen1w")
+region_enabled = true
+region_rect = Rect2(0, 0, 14.626888, 15.777398)
+
+[node name="ClownFishTitle" type="Label" parent="ClownfishLure" unique_id=930437993]
+offset_left = -17.0
+offset_top = -19.0
+offset_right = 23.0
+offset_bottom = -11.75
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 6
+text = "clownfish lure"
+
+[node name="ClownfishButton" type="Button" parent="ClownfishLure" unique_id=2097841439]
+offset_left = -14.0
+offset_top = 7.0
+offset_right = 18.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 5
+text = "200 Coins"
+
+[node name="ClownfishDescription" type="Label" parent="ClownfishLure" unique_id=1047654595]
+offset_left = -11.913041
+offset_top = 21.217392
+offset_right = 21.08696
+offset_bottom = 44.217392
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 4
+text = "Increase the 
+chance of getting
+A Clownfish"
+
+[node name="CodLure" type="Sprite2D" parent="." unique_id=605504973]
+position = Vector2(169.56522, 67.652176)
+texture = ExtResource("2_fen1w")
+region_enabled = true
+region_rect = Rect2(15.827564, -0.17985916, 14.626888, 15.777398)
+
+[node name="CodTitle" type="Label" parent="CodLure" unique_id=1445172739]
+offset_left = -11.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = -9.75
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 6
+text = "cod lure"
+
+[node name="CodButton" type="Button" parent="CodLure" unique_id=584571237]
+offset_left = -16.0
+offset_top = 8.0
+offset_right = 16.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 5
+text = "300 Coins"
+
+[node name="CodDescription" type="Label" parent="CodLure" unique_id=822911151]
+offset_left = -16.086956
+offset_top = 23.652172
+offset_right = 16.913044
+offset_bottom = 46.652172
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 4
+text = "Increase the 
+chance of getting
+A Cod"
+
+[node name="GoldfishLure" type="Sprite2D" parent="." unique_id=1574037414]
+position = Vector2(205.56522, 66.652176)
+texture = ExtResource("2_fen1w")
+region_enabled = true
+region_rect = Rect2(48.02228, 0.35971642, 14.626888, 15.777398)
+
+[node name="GoldfishTitle" type="Label" parent="GoldfishLure" unique_id=1212197446]
+offset_left = -12.0
+offset_top = -16.0
+offset_right = 12.0
+offset_bottom = -8.75
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 6
+text = "goldfish lure"
+
+[node name="GoldfishButton" type="Button" parent="GoldfishLure" unique_id=1714594319]
+offset_left = -14.0
+offset_top = 10.0
+offset_right = 18.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 5
+text = "150 Coins"
+
+[node name="GoldfishDescription" type="Label" parent="GoldfishLure" unique_id=705847015]
+offset_left = -11.652169
+offset_top = 24.21739
+offset_right = 21.347832
+offset_bottom = 47.217392
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 4
+text = "Increase the 
+chance of getting
+A Goldfish"
+
+[node name="FatChance" type="Sprite2D" parent="." unique_id=254110954]
+position = Vector2(247.56522, 67.652176)
+texture = ExtResource("2_fen1w")
+region_enabled = true
+region_rect = Rect2(0.8992958, 16.367146, 14.626888, 15.777398)
+
+[node name="FatChanceTitle" type="Label" parent="FatChance" unique_id=482763941]
+offset_left = -12.0
+offset_top = -16.0
+offset_right = 12.0
+offset_bottom = -8.75
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 6
+text = "fat chance"
+
+[node name="FatChanceButton" type="Button" parent="FatChance" unique_id=1228829211]
+offset_left = -12.347826
+offset_top = 8.0
+offset_right = 19.652174
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 5
+text = "500 Coins"
+
+[node name="FatChanceDescription" type="Label" parent="FatChance" unique_id=1315909381]
+offset_left = -14.956507
+offset_top = 23.21739
+offset_right = 26.043493
+offset_bottom = 46.217392
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 4
+text = "Triple the weight of 
+any fish caught."
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1218295394]
+offset_left = 109.56522
+offset_top = 116.95652
+offset_right = 356.56522
+offset_bottom = 118.95652
+
+[node name="Close Button" type="Button" parent="." unique_id=1761132069]
+offset_left = 322.6087
+offset_top = 20.869566
+offset_right = 352.6087
+offset_bottom = 51.2029
+text = "❌"
+
+[node name="BuyMessage" type="Label" parent="." unique_id=1855489932]
+offset_left = 292.17392
+offset_top = 13.04348
+offset_right = 332.17392
+offset_bottom = 36.04348
+theme_override_fonts/font = ExtResource("1_2vps4")
+
+[node name="BuyMessageTimer" type="Timer" parent="BuyMessage" unique_id=1951417417]
+one_shot = true
+
+[node name="Warning" type="Label" parent="." unique_id=1462013844]
+offset_left = 118.26088
+offset_top = 20.434784
+offset_right = 162.2609
+offset_bottom = 59.934784
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 6
+text = "Only ONE bait
+ can be used at
+ a time"
+
+[node name="CoinsAmount" type="Label" parent="." unique_id=1539407340]
+offset_left = 264.34784
+offset_top = 40.0
+offset_right = 298.34784
+offset_bottom = 52.5625
+theme_override_fonts/font = ExtResource("1_2vps4")
+theme_override_font_sizes/font_size = 8
+text = "Coins: 0"
+
+[connection signal="pressed" from="ClownfishLure/ClownfishButton" to="." method="_on_clownfish_button_pressed"]
+[connection signal="pressed" from="CodLure/CodButton" to="." method="_on_cod_button_pressed"]
+[connection signal="pressed" from="GoldfishLure/GoldfishButton" to="." method="_on_goldfish_button_pressed"]
+[connection signal="pressed" from="FatChance/FatChanceButton" to="." method="_on_fat_chance_button_pressed"]
+[connection signal="pressed" from="Close Button" to="." method="_on_close_button_pressed"]
+[connection signal="timeout" from="BuyMessage/BuyMessageTimer" to="." method="_on_buy_message_timer_timeout"]

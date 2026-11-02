@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cdwlsl11sut17"]
+
+[ext_resource type="Texture2D" uid="uid://dbnw4fb08l7d3" path="res://assets/fishing_free/780a08ef-2362-44d5-a58e-5755dcb82d78.png" id="1_ulyge"]
+[ext_resource type="Texture2D" uid="uid://wd7dkvp0bgr3" path="res://assets/fishing_free/76634276-f667-45b1-86e5-afcb06f4bc28.png" id="2_uw1ni"]
+[ext_resource type="Texture2D" uid="uid://bea2o3h7xg8ek" path="res://assets/fishing_free/global_free_recoloured.png" id="3_c374r"]
+
+[node name="Goldfish" type="Node2D" unique_id=1613635953]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1799921498]
+light_mask = 3
+offset_left = -61.0
+offset_top = -55.0
+offset_right = 61.0
+offset_bottom = 55.0
+texture = ExtResource("1_ulyge")
+expand_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1766478634]
+scale = Vector2(0.1, 0.1)
+energy = 7.0
+blend_mode = 2
+texture = ExtResource("2_uw1ni")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1481243186]
+light_mask = 2
+position = Vector2(0, 1)
+texture = ExtResource("3_c374r")
+region_enabled = true
+region_rect = Rect2(15.458935, 32.028812, 17.285751, 16.638851)

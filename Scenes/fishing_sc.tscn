@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://0wedekccub62"]
+
+[ext_resource type="Script" uid="uid://b1qhibo41kvu2" path="res://Scripts/fishing_sc.gd" id="1_d5342"]
+[ext_resource type="FontFile" uid="uid://b366gcebddcsv" path="res://assets/Fonts/RodeliaRegular-XG7w2.ttf" id="2_gyieb"]
+
+[sub_resource type="Gradient" id="Gradient_1iagy"]
+colors = PackedColorArray(0, 1, 0, 1, 6.1466823, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t1rta"]
+gradient = SubResource("Gradient_1iagy")
+use_hdr = true
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
+
+[node name="FishingSC" type="CanvasLayer" unique_id=1090067433]
+script = ExtResource("1_d5342")
+
+[node name="Background" type="ColorRect" parent="." unique_id=604585125]
+offset_right = 56.0
+offset_bottom = 416.0
+color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+
+[node name="Bar" type="TextureRect" parent="Background" unique_id=1404844868]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 408.0
+texture = SubResource("GradientTexture2D_t1rta")
+expand_mode = 1
+
+[node name="Pin" type="ColorRect" parent="Background/Bar" unique_id=1168304356]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 400.0
+offset_right = 44.0
+offset_bottom = 406.0
+
+[node name="Timer" type="Timer" parent="." unique_id=535203651]
+process_mode = 1
+one_shot = true
+
+[node name="Label" type="Label" parent="." unique_id=1586707601]
+offset_left = -275.0
+offset_top = 9.0
+offset_right = -235.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gyieb")
+theme_override_font_sizes/font_size = 64
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

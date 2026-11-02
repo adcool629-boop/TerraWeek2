@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://chjgkubdfca40"]
+
+[ext_resource type="Texture2D" uid="uid://q2oxuutxtfkp" path="res://assets/fishing_free/StarLight.png" id="1_pykev"]
+[ext_resource type="Texture2D" uid="uid://bea2o3h7xg8ek" path="res://assets/fishing_free/global_free_recoloured.png" id="2_wx3q7"]
+
+[node name="Clownfish" type="Node2D" unique_id=1625131399]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=919242607]
+offset_left = -60.0
+offset_top = -59.0
+offset_right = -20.0
+offset_bottom = -19.0
+scale = Vector2(3, 3)
+color = Color(0.11858138, 0.11858138, 0.11858138, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=513702706]
+position = Vector2(0, 14)
+energy = 7.4
+texture = ExtResource("1_pykev")
+texture_scale = 2.79
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1083878827]
+light_mask = 2
+position = Vector2(0, 1)
+texture = ExtResource("2_wx3q7")
+region_enabled = true
+region_rect = Rect2(17.08343, 0.37839603, 13.463831, 14.88063)

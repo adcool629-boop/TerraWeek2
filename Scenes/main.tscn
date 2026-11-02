@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://8btg4gal3xkg"]
+
+[ext_resource type="Script" uid="uid://tmncd8ujrjk6" path="res://Scripts/main.gd" id="1_344ge"]
+[ext_resource type="PackedScene" uid="uid://dhsabp81xygly" path="res://Scenes/character_select.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cdam758bs76jp" path="res://Scenes/tile_map.tscn" id="4_jjvhh"]
+
+[node name="Main" type="Node2D" unique_id=285687330]
+script = ExtResource("1_344ge")
+
+[node name="Character Select" parent="." unique_id=1312844584 instance=ExtResource("1_bo1nx")]
+position = Vector2(-8212, -878.00006)
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=2022104962]
+position = Vector2(1, 0)
+
+[node name="TileMap" parent="." unique_id=796577746 instance=ExtResource("4_jjvhh")]
+
+[node name="FishingZones" type="Node2D" parent="." unique_id=237852168]

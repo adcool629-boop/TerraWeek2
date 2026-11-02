@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dtygrq1p2u8de"]
+
+[ext_resource type="Script" uid="uid://bst5qiwosrra1" path="res://Scripts/mini_game_1.gd" id="1_7555m"]
+[ext_resource type="FontFile" uid="uid://b366gcebddcsv" path="res://assets/Fonts/RodeliaRegular-XG7w2.ttf" id="2_maoqn"]
+[ext_resource type="Texture2D" uid="uid://b0uebn1maq0en" path="res://assets/images (1).png" id="3_tnnmv"]
+
+[node name="MiniGame1" type="CanvasLayer" unique_id=1706669338]
+script = ExtResource("1_7555m")
+
+[node name="Label" type="Label" parent="." unique_id=1431629933]
+offset_left = 375.0
+offset_top = 200.0
+offset_right = 552.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("2_maoqn")
+horizontal_alignment = 1
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1532089663]
+one_shot = true
+
+[node name="Timer" type="Timer" parent="." unique_id=425343372]
+wait_time = 2.5
+one_shot = true
+
+[node name="Label2" type="Label" parent="." unique_id=845228080]
+offset_left = 375.0
+offset_top = 175.0
+offset_right = 559.0
+offset_bottom = 198.0
+theme_override_fonts/font = ExtResource("2_maoqn")
+text = "Type the Correct Letter"
+horizontal_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=760642315]
+offset_left = 338.0
+offset_top = 251.0
+offset_right = 593.0
+offset_bottom = 253.0
+size_flags_vertical = 3
+value = 100.0
+fill_mode = 6
+nine_patch_stretch = true
+texture_progress = ExtResource("3_tnnmv")
+
+[node name="EndTimer" type="Timer" parent="." unique_id=1773673537]
+one_shot = true
+
+[node name="WinTimer" type="Timer" parent="." unique_id=938862412]
+one_shot = true
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]
